@@ -1,10 +1,11 @@
-import { JetBrains_Mono } from "next/font/google";
+import { Kode_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
-const jetBrainsMono = JetBrains_Mono({
+const kodeMono = Kode_Mono({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetbrainsMono",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-kodeMono",
 });
 
 export const metadata = {
@@ -16,7 +17,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={jetBrainsMono.variable}>{children}</body>
+      <body className={kodeMono.variable}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

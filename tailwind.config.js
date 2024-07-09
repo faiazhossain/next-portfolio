@@ -20,9 +20,16 @@ module.exports = {
       xl: "1200px",
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
+      primary: "var(--font-kodeMono)",
     },
     extend: {
+      colors: {
+        primary: "#1c1c22",
+        accent: {
+          DEFAULT: "#f89b29",
+          hover: "#ff0f7b",
+        },
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
